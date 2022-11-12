@@ -1,0 +1,594 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="626,2562" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="47">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="636,2497" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="Datalist" />
+      <Variable x:TypeArguments="s:String[]" Name="headersList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="594,1202" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadOnly="True" ResizeWindow="None" TemplatePath="challenge_1.xlsx" UseTemplate="True" WorkbookPath="challenge_1.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelFile" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="486,911" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="lastRow" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadRangeX DisplayName="Read Range" HasHeaders="False" sap:VirtualizedContainerService.HintSize="444,168" sap2010:WorkflowViewState.IdRef="ReadRangeX_2">
+              <ueab:ReadRangeX.Range>
+                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">ExcelFile.Sheet["Sheet1"].Range["A1:G1"]</CSharpValue>
+                </InArgument>
+              </ueab:ReadRangeX.Range>
+              <ueab:ReadRangeX.SaveTo>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">Datalist</CSharpReference>
+                </OutArgument>
+              </ueab:ReadRangeX.SaveTo>
+            </ueab:ReadRangeX>
+            <Assign sap:VirtualizedContainerService.HintSize="444,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">
+                  <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">headersList</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">
+                  <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">Datalist.Rows[0].ItemArray.Select(x =&gt; x.ToString()).ToArray();</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ueab:FindFirstLastDataRowX FirstRowIndex="{x:Null}" BlankRowsToSkip="1" ColumnName="First Name" ConfigureLastRowAs="LastPopulatedRow" DisplayName="Find First/Last Data Row" FirstRowOffset="0" HasHeaders="True" sap:VirtualizedContainerService.HintSize="444,303" sap2010:WorkflowViewState.IdRef="FindFirstLastDataRowX_1" LastRowOffset="0">
+              <ueab:FindFirstLastDataRowX.LastRowIndex>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">lastRow</CSharpReference>
+                </OutArgument>
+              </ueab:FindFirstLastDataRowX.LastRowIndex>
+              <ueab:FindFirstLastDataRowX.Range>
+                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">ExcelFile.Sheet["Sheet1"]</CSharpValue>
+                </InArgument>
+              </ueab:FindFirstLastDataRowX.Range>
+            </ueab:FindFirstLastDataRowX>
+            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,168" sap2010:WorkflowViewState.IdRef="ReadRangeX_3">
+              <ueab:ReadRangeX.Range>
+                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">ExcelFile.Sheet["Sheet1"].Range["A1:G" + lastRow]</CSharpValue>
+                </InArgument>
+              </ueab:ReadRangeX.Range>
+              <ueab:ReadRangeX.SaveTo>
+                <OutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">Datalist</CSharpReference>
+                </OutArgument>
+              </ueab:ReadRangeX.SaveTo>
+            </ueab:ReadRangeX>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <Sequence sap:VirtualizedContainerService.HintSize="594,1163" sap2010:WorkflowViewState.IdRef="Sequence_16">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Новая вкладка" sap:VirtualizedContainerService.HintSize="552,1071" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="3200a085-1cc5-4808-b8cd-11c134211f65" UserDataFolderMode="Automatic" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="518,854" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="476,760" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://www.rpachallenge.com/" Version="V1" />
+                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="96fa1bbe-bebf-4327-a94c-36d9689479a6" DisplayName="CV Screen Scope 'grouping'" sap:VirtualizedContainerService.HintSize="434,544" sap2010:WorkflowViewState.IdRef="CVScope_2" Version="V5">
+                  <p:CVScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Сделать" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="400,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3200a085-1cc5-4808-b8cd-11c134211f65" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.rpachallenge.com/" DesignTimeRectangle="23, 840, 447, 68" ElementType="Button" FriendlyName="'Start'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='waves-effect col s12 m12 l12 btn-large uiColorButton' aaname='Start' check:text='Start' /&gt;" Guid="8187a158-bee2-497a-b900-8302fe20f4f2" ImageBase64="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" InformativeScreenshot="0a7a6b9e1bdfe4323b31ecf86bd32cac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1105" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,989" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,700" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="name" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Тело" sap:VirtualizedContainerService.HintSize="376,575" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:String" Default="none" Name="tmpName" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">tmpName</CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">name.ToString().Trim()</CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,125" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31" xml:space="preserve">CurrentRow.ToString() + ": " +  tmpName</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="0" DelayBefore="0" DelayBetweenKeys="0" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3200a085-1cc5-4808-b8cd-11c134211f65" Version="V1">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.rpachallenge.com/" DesignTimeRectangle="623, 488, 377, 58" ElementType="InputBox" FriendlyName="'INPUT tO16V'" Guid="10bfd73c-12a0-496d-8d24-ba0d3592a56f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAX0AAAA+CAYAAADHwssnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVHhe7dZBDcAwEAPB8gdxVC+vBER3RjKFlb8FIEP0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8gRPQBQkQfIET0AUJEHyBE9AFCRB8g5EV/ZszM7Ke7PH2AENEHyNg9UkAP0Ei9K7QAAAAASUVORK5CYII=" InformativeScreenshot="17054f1ef693e11fb476004e4045dccc.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="623, 464, 80, 21" ElementType="Text" FriendlyName="'First Name'" FullSelectorArgument="&lt;webctrl aaname='First Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='First Name' tag='LABEL' type='' class='' check:innerText='First Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAZCAYAAACvrQlzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPZSURBVGhD7ZePa9s4FMfv//8jTM1MDXXWW7aMlAyXwJkaeude9wMfKQ0xmBrcjaWXFINLwvfek2RHsZO1WzXu4PwB0UqWnqSv3ntSfkGHUTpBDdMJaphOUMN0ghqmE9QwnaCGebqgXxPEyVxVOvahCbpAGseIm+U6R0lfJycWLGuAjw+y94+xQrFcoPimjRL5Nc278/DkGtO/VfU/iCboBEPLgvtqhNE7rQQT2gZhxEPlHMOJqu7kC8IjOrwDD+Gtaqp5yvh/l5agexdbFljcs69KynvyNK6uyaNmU+SbT1gVORLypEk6R7lWjdSvWF5iQHMM3i+wYE/VxmyoBKXSO6eazp41PhS0BvLqqxRzZbNen0CLjAfy8ivqO8u3I6Wc727XKO937KvBkwX9EnqwjkK1Qblpbxxi6HAqIG/6zO0FJu8cqluwDx3YLIrTR8Se9jmER+38rSpeuC2XRNk+i+CTbe93vU97jflFHw7Pc2DDObTpr4P+RSxt1PbluL7vw6W+9doOXPhTcpRPQ7LB46v2Y4Q32mkXKYKX1RwOHJv/9zCmsU2eJahY0JV2WjcBHMtFcKPq61z2e/tR5OHH5pAoQVmMmU8b9XAuDotpjOfvVPfOss0algmCHq+tLajlDBEvVdN6gfiEDv8FCdQbI620Wc9x+YYOxg2QiYY5ol9pbC9EVnvuCtkZ6UHCR3eqSdESVEzApyDKGFP1daegJw1llKD+TDu5rVTxnYISySltug797fHionwZ0ZYb3EU4ZqEbgh7/0eh5G8Kl9sEHzRsZsQ8VdSKynI2T1GQIDvU5JC1Bq/wmS0FnIdkZ8g1jHPLTMfUjO7bbxyjkG7mywHy/oCinGNWhr4+X/ZzfpB9t09zsvnn3tAsRlaCTYZ3CNo4mi0gPDad6Xg5tCargBB+HGL1yaTGU094/tjGdtu3yeqRCvy2ofZqIPtsk8F+YFPQY4090YVVPSb2k4g1UY1TQ8nZKk6TymaXIz0jUetyPCUqWMeXLrueJi60an5xSrnN8JM0bd+rDpn5GBF1y+rDp8pKfatYpInpWnid6BJr20CygnGRj8Cf9GOBNlrlM8K8vlcgUvnxZBCT6I8+mlm0V+hx+9Ro5V5I953WI5I6M0dNsPgvR55A05aGEyOP0WglnC5kCeV9vuW2EaWMPxkN+/tcIHj8ryJYoR3SxVTcrkV8MxNOFv+0a/y3bIvQba1xlEQauNp87QJRlDRvPE5TvhjRUzzM1j90bIf6qPmtogpplVezzwJ8EvyaK7fAzz+M/nX+aoP9XOkEN0wlqmE5Qw3SCGgX4B1GRi8LXsnDlAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                              <uix:TargetAnchorable.FullSelectorArgument>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">String.Format("&lt;webctrl tag='DIV' innertext='{0}' idx='2' /&gt;&lt;webctrl tag='INPUT' /&gt;", tmpName)</CSharpValue>
+                                                </InArgument>
+                                              </uix:TargetAnchorable.FullSelectorArgument>
+                                            </uix:TargetAnchorable>
+                                          </uix:NTypeInto.Target>
+                                          <uix:NTypeInto.Text>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">CurrentRow[name.ToString()].ToString()</CSharpValue>
+                                            </InArgument>
+                                          </uix:NTypeInto.Text>
+                                        </uix:NTypeInto>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                  <ui:ForEach.Values>
+                                    <InArgument x:TypeArguments="sc:IEnumerable">
+                                      <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">headersList</CSharpValue>
+                                    </InArgument>
+                                  </ui:ForEach.Values>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ForEach>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3200a085-1cc5-4808-b8cd-11c134211f65" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.rpachallenge.com/" DesignTimeRectangle="609, 934, 145, 45" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn uiColorButton' aaname='Submit' check:text='Submit' /&gt;" Guid="3dd8236d-b508-46d2-bc80-28097bbf23c1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJUAAAAxCAYAAADTL+u3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACMSURBVHhe7dIxAQAADMOg+TfdmcgJGrhBTCpyUpGTipxU5KQiJxU5qchJRU4qclKRk4qcVOSkIicVOanISUVOKnJSkZOKnFTkpCInFTmpyElFTipyUpGTipxU5KQiJxU5qchJRU4qclKRk4qcVOSkIicVOanISUVOKnJSkZOKnFTkpCInFTmpyElFbHvQWaiMgRiFYQAAAABJRU5ErkJggg==" InformativeScreenshot="776ad67a9891f013a776176e9b022ab1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                          <ui:ForEachRow.DataTable>
+                            <InArgument x:TypeArguments="sd:DataTable">
+                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">Datalist</CSharpValue>
+                            </InArgument>
+                          </ui:ForEachRow.DataTable>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ForEachRow>
+                      </Sequence>
+                    </ActivityAction>
+                  </p:CVScope.Body>
+                  <p:CVScope.DesignTimeCache>
+                    <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+                  </p:CVScope.DesignTimeCache>
+                  <p:CVScope.DesignTimeCacheContainer>
+                    <uc:CvCacheContainer>
+                      <uc:CvCacheContainer.Caches>
+                        <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                          <uc:CVCache DisplayName="Главный экран" Id="96fa1bbe-bebf-4327-a94c-36d9689479a6" InformativeScreenshot="0ef1a224a116d0a7adfe1d1d751a4ccf" LogicalPosition="-1920, 490" OcrText="Instructions EN Email Address 1. The goal of this challenge is to create a workflow that will input data from a spreadsheet into the form fields on the First Name Last Name screen. 2. Beware! The fields will change position on the screen after every submission Role in Company Phone Number throughout 10 rounds thus the workflow must correctly identify where each spreadsheet record must be typed every time. Company Name 3. The actual countdown of the challenge will begin once you click the Start button until then you may submit the form as SUBMIT many times as you wish without receiving penalties. Good luck! DOWNLOAD EXCEL + START" Position="-1920, 524" ScaleFactor="1.25" ScreenshotGuid="585183f8-981b-4554-b6b3-98dfddf4bc67" ServerVersion="1">
+                            <uc:CVCache.CvAnchorRelations>
+                              <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="8">
+                                <uc:AnchorRelationInfo Target="10">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>69</x:Int32>
+                                      <x:Int32>70</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                                <uc:AnchorRelationInfo Target="9">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>49</x:Int32>
+                                      <x:Int32>50</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                                <uc:AnchorRelationInfo Target="8">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>28</x:Int32>
+                                      <x:Int32>29</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                                <uc:AnchorRelationInfo Target="7">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>30</x:Int32>
+                                      <x:Int32>31</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                                <uc:AnchorRelationInfo Target="6">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>46</x:Int32>
+                                      <x:Int32>47</x:Int32>
+                                      <x:Int32>48</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                                <uc:AnchorRelationInfo Target="5">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>3</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                                <uc:AnchorRelationInfo Target="3">
+                                  <uc:AnchorRelationInfo.Anchors>
+                                    <x:Array Type="x:Int32">
+                                      <x:Int32>2</x:Int32>
+                                    </x:Array>
+                                  </uc:AnchorRelationInfo.Anchors>
+                                </uc:AnchorRelationInfo>
+                              </scg:List>
+                            </uc:CVCache.CvAnchorRelations>
+                            <uc:CVCache.CvUiElements>
+                              <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
+                                <uc:CvElementInfo Category="Button" Region="479, 403, 118, 39" />
+                                <uc:CvElementInfo Category="Icon" Region="333, 557, 27, 20" />
+                                <uc:CvElementInfo Category="Button" Region="9, 592, 358, 57" />
+                                <uc:CvElementInfo Category="InputBox" Region="488, 85, 308, 33" />
+                                <uc:CvElementInfo Category="Button" Region="289, 8, 80, 39" />
+                                <uc:CvElementInfo Category="InputBox" Region="812, 82, 310, 36" />
+                                <uc:CvElementInfo Category="InputBox" Region="488, 264, 308, 30" />
+                                <uc:CvElementInfo Category="InputBox" Region="809, 174, 312, 33" />
+                                <uc:CvElementInfo Category="InputBox" Region="484, 175, 311, 32" />
+                                <uc:CvElementInfo Category="InputBox" Region="813, 263, 308, 33" />
+                                <uc:CvElementInfo Category="InputBox" Region="486, 350, 312, 36" />
+                                <uc:CvElementInfo Category="Button" Region="10, 549, 356, 38" />
+                                <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="3, 593, 396, 56" />
+                                <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="277, 116, 15, 15" />
+                                <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="285, 6, 86, 44" />
+                                <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="36, 207, 344, 36" />
+                                <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="4, 158, 365, 37" />
+                              </scg:List>
+                            </uc:CVCache.CvUiElements>
+                            <uc:CVCache.OcrTexts>
+                              <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="109">
+                                <uc:OcrTextInfo Region="18, 16, 143, 22" Text="Instructions" />
+                                <uc:OcrTextInfo Region="320, 20, 19, 13" Text="EN" />
+                                <uc:OcrTextInfo Region="490, 56, 32, 11" Text="Email" />
+                                <uc:OcrTextInfo Region="814, 56, 49, 11" Text="Address" />
+                                <uc:OcrTextInfo Region="20, 92, 9, 13" Text="1." />
+                                <uc:OcrTextInfo Region="31, 91, 30, 14" Text="The" />
+                                <uc:OcrTextInfo Region="64, 91, 36, 18" Text="goal" />
+                                <uc:OcrTextInfo Region="102, 91, 17, 15" Text="of" />
+                                <uc:OcrTextInfo Region="121, 91, 28, 14" Text="this" />
+                                <uc:OcrTextInfo Region="152, 92, 77, 16" Text="challenge" />
+                                <uc:OcrTextInfo Region="232, 91, 13, 14" Text="is" />
+                                <uc:OcrTextInfo Region="248, 92, 17, 13" Text="to" />
+                                <uc:OcrTextInfo Region="268, 92, 51, 13" Text="create" />
+                                <uc:OcrTextInfo Region="322, 94, 12, 11" Text="a" />
+                                <uc:OcrTextInfo Region="20, 114, 69, 15" Text="workflow" />
+                                <uc:OcrTextInfo Region="91, 114, 34, 15" Text="that" />
+                                <uc:OcrTextInfo Region="126, 113, 25, 15" Text="will" />
+                                <uc:OcrTextInfo Region="154, 114, 42, 17" Text="input" />
+                                <uc:OcrTextInfo Region="198, 114, 38, 14" Text="data" />
+                                <uc:OcrTextInfo Region="239, 114, 38, 14" Text="from" />
+                                <uc:OcrTextInfo Region="279, 116, 12, 12" Text="a" />
+                                <uc:OcrTextInfo Region="20, 137, 100, 18" Text="spreadsheet" />
+                                <uc:OcrTextInfo Region="121, 137, 30, 14" Text="into" />
+                                <uc:OcrTextInfo Region="153, 138, 26, 13" Text="the" />
+                                <uc:OcrTextInfo Region="183, 137, 38, 14" Text="form" />
+                                <uc:OcrTextInfo Region="223, 137, 42, 14" Text="fields" />
+                                <uc:OcrTextInfo Region="268, 140, 20, 11" Text="on" />
+                                <uc:OcrTextInfo Region="292, 138, 26, 13" Text="the" />
+                                <uc:OcrTextInfo Region="490, 144, 25, 10" Text="First" />
+                                <uc:OcrTextInfo Region="517, 144, 36, 10" Text="Name" />
+                                <uc:OcrTextInfo Region="814, 145, 25, 10" Text="Last" />
+                                <uc:OcrTextInfo Region="842, 144, 36, 11" Text="Name" />
+                                <uc:OcrTextInfo Region="20, 163, 56, 12" Text="screen." />
+                                <uc:OcrTextInfo Region="20, 204, 13, 13" Text="2." />
+                                <uc:OcrTextInfo Region="37, 204, 62, 13" Text="Beware!" />
+                                <uc:OcrTextInfo Region="101, 204, 29, 13" Text="The" />
+                                <uc:OcrTextInfo Region="133, 204, 42, 14" Text="fields" />
+                                <uc:OcrTextInfo Region="178, 204, 24, 14" Text="will" />
+                                <uc:OcrTextInfo Region="206, 204, 60, 18" Text="change" />
+                                <uc:OcrTextInfo Region="269, 203, 63, 19" Text="position" />
+                                <uc:OcrTextInfo Region="335, 207, 20, 11" Text="on" />
+                                <uc:OcrTextInfo Region="20, 226, 26, 14" Text="the" />
+                                <uc:OcrTextInfo Region="48, 228, 53, 12" Text="screen" />
+                                <uc:OcrTextInfo Region="104, 226, 38, 14" Text="after" />
+                                <uc:OcrTextInfo Region="145, 229, 44, 15" Text="every" />
+                                <uc:OcrTextInfo Region="191, 226, 88, 15" Text="submission" />
+                                <uc:OcrTextInfo Region="490, 233, 26, 11" Text="Role" />
+                                <uc:OcrTextInfo Region="518, 232, 12, 12" Text="in" />
+                                <uc:OcrTextInfo Region="532, 233, 61, 14" Text="Company" />
+                                <uc:OcrTextInfo Region="814, 233, 38, 11" Text="Phone" />
+                                <uc:OcrTextInfo Region="855, 233, 49, 11" Text="Number" />
+                                <uc:OcrTextInfo Region="20, 249, 88, 18" Text="throughout" />
+                                <uc:OcrTextInfo Region="110, 250, 16, 13" Text="10" />
+                                <uc:OcrTextInfo Region="129, 249, 55, 14" Text="rounds" />
+                                <uc:OcrTextInfo Region="186, 249, 35, 14" Text="thus" />
+                                <uc:OcrTextInfo Region="224, 249, 26, 14" Text="the" />
+                                <uc:OcrTextInfo Region="252, 249, 69, 14" Text="workflow" />
+                                <uc:OcrTextInfo Region="20, 273, 41, 14" Text="must" />
+                                <uc:OcrTextInfo Region="63, 272, 69, 18" Text="correctly" />
+                                <uc:OcrTextInfo Region="135, 272, 58, 18" Text="identify" />
+                                <uc:OcrTextInfo Region="195, 272, 48, 15" Text="where" />
+                                <uc:OcrTextInfo Region="246, 272, 40, 15" Text="each" />
+                                <uc:OcrTextInfo Region="20, 296, 98, 17" Text="spreadsheet" />
+                                <uc:OcrTextInfo Region="121, 296, 51, 13" Text="record" />
+                                <uc:OcrTextInfo Region="176, 297, 40, 12" Text="must" />
+                                <uc:OcrTextInfo Region="219, 296, 20, 13" Text="be" />
+                                <uc:OcrTextInfo Region="242, 296, 46, 18" Text="typed" />
+                                <uc:OcrTextInfo Region="292, 298, 44, 16" Text="every" />
+                                <uc:OcrTextInfo Region="20, 319, 40, 14" Text="time." />
+                                <uc:OcrTextInfo Region="489, 321, 62, 14" Text="Company" />
+                                <uc:OcrTextInfo Region="553, 321, 36, 11" Text="Name" />
+                                <uc:OcrTextInfo Region="20, 361, 14, 14" Text="3." />
+                                <uc:OcrTextInfo Region="36, 361, 29, 14" Text="The" />
+                                <uc:OcrTextInfo Region="68, 362, 50, 13" Text="actual" />
+                                <uc:OcrTextInfo Region="122, 362, 88, 13" Text="countdown" />
+                                <uc:OcrTextInfo Region="212, 361, 16, 14" Text="of" />
+                                <uc:OcrTextInfo Region="231, 362, 27, 13" Text="the" />
+                                <uc:OcrTextInfo Region="260, 361, 78, 18" Text="challenge" />
+                                <uc:OcrTextInfo Region="20, 384, 25, 14" Text="will" />
+                                <uc:OcrTextInfo Region="48, 384, 45, 18" Text="begin" />
+                                <uc:OcrTextInfo Region="96, 388, 40, 12" Text="once" />
+                                <uc:OcrTextInfo Region="139, 388, 28, 15" Text="you" />
+                                <uc:OcrTextInfo Region="171, 384, 36, 14" Text="click" />
+                                <uc:OcrTextInfo Region="209, 384, 26, 14" Text="the" />
+                                <uc:OcrTextInfo Region="238, 385, 38, 13" Text="Start" />
+                                <uc:OcrTextInfo Region="279, 384, 52, 15" Text="button" />
+                                <uc:OcrTextInfo Region="20, 408, 34, 14" Text="until" />
+                                <uc:OcrTextInfo Region="56, 408, 36, 15" Text="then" />
+                                <uc:OcrTextInfo Region="96, 411, 29, 15" Text="you" />
+                                <uc:OcrTextInfo Region="128, 410, 36, 15" Text="may" />
+                                <uc:OcrTextInfo Region="168, 408, 55, 15" Text="submit" />
+                                <uc:OcrTextInfo Region="224, 408, 27, 13" Text="the" />
+                                <uc:OcrTextInfo Region="253, 408, 37, 14" Text="form" />
+                                <uc:OcrTextInfo Region="294, 411, 20, 11" Text="as" />
+                                <uc:OcrTextInfo Region="508, 416, 56, 12" Text="SUBMIT" />
+                                <uc:OcrTextInfo Region="20, 433, 45, 16" Text="many" />
+                                <uc:OcrTextInfo Region="68, 431, 44, 14" Text="times" />
+                                <uc:OcrTextInfo Region="116, 433, 20, 12" Text="as" />
+                                <uc:OcrTextInfo Region="137, 434, 30, 14" Text="you" />
+                                <uc:OcrTextInfo Region="169, 431, 36, 14" Text="wish" />
+                                <uc:OcrTextInfo Region="208, 432, 59, 14" Text="without" />
+                                <uc:OcrTextInfo Region="270, 431, 71, 18" Text="receiving" />
+                                <uc:OcrTextInfo Region="20, 454, 75, 18" Text="penalties." />
+                                <uc:OcrTextInfo Region="20, 496, 44, 15" Text="Good" />
+                                <uc:OcrTextInfo Region="66, 496, 36, 14" Text="luck!" />
+                                <uc:OcrTextInfo Region="101, 560, 92, 13" Text="DOWNLOAD" />
+                                <uc:OcrTextInfo Region="197, 560, 45, 13" Text="EXCEL" />
+                                <uc:OcrTextInfo Region="342, 563, 8, 9" Text="+" />
+                                <uc:OcrTextInfo Region="164, 614, 48, 13" Text="START" />
+                              </scg:List>
+                            </uc:CVCache.OcrTexts>
+                          </uc:CVCache>
+                        </scg:List>
+                      </uc:CvCacheContainer.Caches>
+                    </uc:CvCacheContainer>
+                  </p:CVScope.DesignTimeCacheContainer>
+                  <p:CVScope.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Language="en" Profile="Screen" Scale="1" Timeout="100000">
+                        <p1:UiPathScreenOCR.Image>
+                          <InArgument x:TypeArguments="sd1:Image">
+                            <CSharpValue x:TypeArguments="sd1:Image" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">Image</CSharpValue>
+                          </InArgument>
+                        </p1:UiPathScreenOCR.Image>
+                      </p1:UiPathScreenOCR>
+                    </ActivityFunc>
+                  </p:CVScope.OCREngine>
+                  <p:CVScope.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="edbb4fd5-5596-4f4c-a2ff-e28367e5e130" InformativeScreenshot="496eb91361a93783d4214879ed532655" Selector="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;div&amp;gt;app-rpa1&amp;gt;div' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                    </ui:Target>
+                  </p:CVScope.Target>
+                  <p:CVScope.UseLocalServer>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </p:CVScope.UseLocalServer>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </p:CVScope>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.CloseMode>
+          <InArgument x:TypeArguments="uix:NAppCloseMode">
+            <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">0</CSharpValue>
+          </InArgument>
+        </uix:NApplicationCard.CloseMode>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-1929, 348, 1938, 1038" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAQhJREFUWEftl9ENwjAMRDsCIzAKm8AGsAGMwEaMwgiMQP0qTkKy09YkfCDypJNKnFzckLTu0AnYmW6mh+nZUHjuTbOcTdHglmKOkINJnS6mjSlCfTLgdTJpLKvsYIkI0nGOTxIQ3Bhjmcsh49Kdi5oE8GYs+8ux1libczv9ylOcZ20CWsZaOYqBgKup9pg6ioHG9AR6Ar+XAG8wjtz9dS2y7SKdAEaKYSyy7UIxRymAiWKYi2y7UMxRCvCaxghjrkW2XaQTaE1PoCdQnEfHZ6kkq0ElWZiAilIqnm9xNDFHWJRSKis7KuOWK4HX+zdH9IieaFXvzWlxhXl66e9oJfYXnuEHyT8zDCPMjw3PbnWtNQAAAABJRU5ErkJggg==" InformativeScreenshot="ca532112eb92eb3b28ea78f88869ac51.png" Selector="&lt;html app='msedge.exe' title='Новая вкладка' /&gt;" Url="edge://newtab/" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
